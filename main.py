@@ -94,7 +94,7 @@ def ruta_división():
     R_división= a/b
     
     return f'''
-        "La división de los numeros {a} y {b} es: {R_división}"
+        "La división de los numeros {a} y {b} es: {R_división} "
         <a href="/">Volver al inicio <a>
         '''
 
@@ -104,7 +104,10 @@ def ruta_división_p():
     b = request.args.get("b", type=float)
     R_división_p= a//b
     
-    return f"La división de los numeros {a} y {b} es: {R_división_p}"
+    return f'''
+        "La división de los numeros {a} y {b} es: {R_división_p} "
+        <a href="/">Volver al inicio <a>
+        '''
 
 @app.route("/random")
 def ruta_random():
@@ -112,7 +115,10 @@ def ruta_random():
     b = request.args.get("b", type=float)
     random = uniform (a, b)
     
-    return f"Numero randon entre {a} y {b} es: {random}"
+    return f'''
+        "Numero randon entre {a} y {b} es: {random} "
+        <a href="/">Volver al inicio <a>
+        '''
 
 #Esto nos permite actualizar rapidamente los cambios
 if __name__=="__main__":
